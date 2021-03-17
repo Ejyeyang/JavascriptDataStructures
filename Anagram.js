@@ -67,5 +67,5 @@ anagramThree(one, two){
             lookUp[letter] -= 1; 
         }
     }
-    return true;
+    return true; test
 }
