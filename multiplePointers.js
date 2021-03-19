@@ -8,6 +8,20 @@ arrThree = [1, 2, 3]; //should return undefined
 //that sum to zero or return undefined if the pair does not exist
 //in the array. 
 
+function sumZeroAgainAgain(arr){
+    let left = 0; 
+    let right = arr.length - 1;
+    while(left < right){
+        let sum = arr[left] + arr[right];
+        if(sum === 0){
+            return [arr[left], arr[right]];
+        } else if(sum > 0){
+            right--;
+        } else {
+            left++;
+        }
+    }
+}
 
 function sumZeroAgain(arr){
     left = 0; 
@@ -36,7 +50,7 @@ function sumZero(arr){
         } else if(sum > 0){
             right--;
         } else {
-            left--;
+            left++;
         }
     }
 }
