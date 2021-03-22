@@ -9,6 +9,24 @@ arrThree = [1, 2, 3]; //should return undefined
 //in the array. 
 
 
+function sumZeroo(arr){
+    left = 0; 
+    right = arr.length - 1; 
+
+    while(left < right){
+        let sum = arr[left] + arr[right];
+        if(sum === 0){
+            return [arr[left], arr[right]];
+        } else if( sum > 0){
+            right--;
+        } else {
+            left++;
+        }
+    }
+}
+
+
+
 function sumZeroAgain(arr){
     left = 0; 
     right = arr.length - 1; 
