@@ -8,21 +8,25 @@
  */
 
 function maxSubArraySum(arr, num){
-    let maxSum = 0; 
-    let tempSum = 0;
-
     if(arr.length < num){
         return null;
     }
 
-    for(let i = 0; i < num; i++){
-        maxSum += arr[i];
-    }
-    tempSum = maxSum; 
+    let temp = 0; 
+    let max = 0; 
 
-    for(let i = num; i < arr.length; i++){
-        tempSum = tempSum - arr[i - num] + arr[i];
-        maxSum = Math.max(maxSum, tempSum);
+    //gets initial max value
+    for(let i = 0; i < num; i++){
+        max += arr[i];
     }
-    return maxSum; 
+    
+    temp = max; 
+
+    //sliding window by subtracting first 
+    //array value and add next array value
+    for(let i = num; i < arr.length; i++){
+        temp = temp - arr[i - num] + arr[i];
+        max = Math.max(max, temp);
+    }
+    return max; 
 }
