@@ -4,22 +4,47 @@
  * index where the value passed to the function is 
  * located. If the value is not found return -1; 
  */
-
-function search(arr, val){
-    let min = 0; 
-    let max = arr.length - 1; 
-
-    while(left <= right){
-        //The Math. floor() function returns the largest integer
-        // less than or equal to a given number.
-        let middle = Math.floor((min + max) / 2); 
-        if(arr[middle] > val){
-            min = arr[middle] + 1;
-        } else if(arr[middle] < val){
-            max = arr[middle] - 1;
-        } else {
-            return middle; 
+ function averagePair(array, targetAverage){
+    if(array.length === 0){
+        return false; 
+    }
+    let left = 0; 
+    let average = 0; 
+    let sum = 0; 
+    let pair = 2; 
+    
+    for(let i = left; i < pair; i++){
+        sum += array[i];
+    }
+    average = sum / 2; 
+    if(average === targetAverage){
+        return true; 
+    }
+    for(let i = pair; i < array.length; i++){
+        let sum = average - array[pair - i] + array[i];
+        let average = sum / 2; 
+        if(average === targetAverage){
+            return true; 
         }
     }
-    return -1; 
+    return false; 
+}
+
+function search(array, val){
+    let min = 0; 
+    let max = array.length - 1; 
+
+    while(min <= max){
+        let middle = Math.floor((min + max) / 2); 
+        let currentElement = array[middle]; 
+        if(currentElement > val){
+            min = middle + 1; 
+        } else if(currentElement < val){
+            max = middle - 1; 
+        } else{
+            return currentElement; 
+        }
+    }
+    return - 1; 
+
 }
