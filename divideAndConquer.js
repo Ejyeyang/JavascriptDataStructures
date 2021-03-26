@@ -4,6 +4,15 @@
  * index where the value passed to the function is 
  * located. If the value is not found return -1; 
  */
+function searchAndDestroy(array, target){
+    let min = 0; 
+    let max = array.length - 1; 
+
+    while(min <= max){
+        let middle = Math.floor((min + max) / 2); 
+        if()
+    }
+}
 
 function search(array, val){
     let min = 0; 
