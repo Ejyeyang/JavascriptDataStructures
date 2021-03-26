@@ -10,8 +10,15 @@ function searchAndDestroy(array, target){
 
     while(min <= max){
         let middle = Math.floor((min + max) / 2); 
-        if()
+        if(array[middle] > target){
+            max = middle; 
+        } else if(array[middle] < target){
+            min = middle;
+        } else {
+            return middle;
+        }
     }
+    return -1; 
 }
 
 function search(array, val){
