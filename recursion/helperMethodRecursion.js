@@ -5,9 +5,7 @@
  * inner function which is recursive. 
  * */ 
 function collectOddValues(arr){
-    
     let result = []; 
-
     function helper(helperInput){
         if(helperInput.length === 0){
             return; 
@@ -25,4 +23,18 @@ function collectOddValues(arr){
     }
     helper(arr);
     return result; 
+}
+
+//pure recursion method of above example
+function collectOddValuesRecursive(arr){
+    let newArr = [];
+    if(arr.length === 0){
+        return newArr;
+    }
+    if(arr[0] % 2 !== 0){
+        newArr.push(arr[0]);
+    }
+    //.concat merges two or more arrays. 
+    newArr = newArr.concat(collectOddValuesRecursive(arr.slice(1)));
+    return newArr; 
 }
