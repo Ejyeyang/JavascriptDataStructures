@@ -31,6 +31,7 @@ function factorial(num){
 }
 
 //recursive example of factorial function. 
+//does same thing as above. 
 function factorialRecursive(num){
     if(num === 1){
         return 1; 
