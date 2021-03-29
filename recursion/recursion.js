@@ -29,3 +29,11 @@ function factorial(num){
     }
     return total;
 }
+
+//recursive example of factorial function. 
+function factorialRecursive(num){
+    if(num === 1){
+        return 1; 
+    }
+    return num * factorialRecursive(num -1); 
+}
