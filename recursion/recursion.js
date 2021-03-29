@@ -19,3 +19,13 @@ function sumRange(num){
     }
     return num + sumRange(num -1); 
 }
+
+//third example of recursive function
+//Iterative example
+function factorial(num){
+    let total = 1; 
+    for(let i = num; i > 1; i--){
+        total *= i; 
+    }
+    return total;
+}
