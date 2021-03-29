@@ -1,4 +1,9 @@
-//Helper method recursion 
+//Helper method recursion
+/** 
+ * Helper method recursion is a pattern where
+ * we have an outer method which calls an 
+ * inner function which is recursive. 
+ * */ 
 function collectOddValues(arr){
     
     let result = []; 
@@ -15,7 +20,7 @@ function collectOddValues(arr){
         an array starting from the position
         passed
          */
-        
+
         helper(helperInput.slice(1)); 
     }
     helper(arr);
