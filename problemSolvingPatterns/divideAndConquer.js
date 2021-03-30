@@ -5,37 +5,18 @@
  * located. If the value is not found return -1; 
  */
 function searchAndDestroy(array, target){
-    let min = 0; 
-    let max = array.length - 1; 
+    let left = 0; 
+    let right = array.length -1; 
 
-    while(min <= max){
-        let middle = Math.floor((min + max) / 2); 
-        if(array[middle] > target){
-            max = middle; 
-        } else if(array[middle] < target){
-            min = middle;
+    while(left <= right){
+        let middle = Math.floor((left + right) / 2); 
+        if(arr[middle] > target){
+            right = middle - 1; 
+        } else if(ar[middle] < target){
+            left = middle + 1;
         } else {
-            return middle;
+            return middle; 
         }
     }
     return -1; 
-}
-
-function search(array, val){
-    let min = 0; 
-    let max = array.length - 1; 
-
-    while(min <= max){
-        let middle = Math.floor((min + max) / 2); 
-        let currentElement = array[middle]; 
-        if(currentElement > val){
-            min = middle + 1; 
-        } else if(currentElement < val){
-            max = middle - 1; 
-        } else{
-            return currentElement; 
-        }
-    }
-    return - 1; 
-
 }
