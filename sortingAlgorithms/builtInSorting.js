@@ -5,13 +5,13 @@ arr.sort();
 arr.sort();
 
 //this sorts ints from small to large works for strings too
-function numberCompare(num1, num2){
+function asc(num1, num2){
     return num1 - num2; 
 }
-arr.sort(numberCompare); 
+arr.sort(asc); 
 
 //this sorts ints from large to small works for strings too. 
-function numCompare(num1, num2){
+function desc(num1, num2){
     return num2 - num1;
 }
-arr.sort(numCompare); 
+arr.sort(desc); 
