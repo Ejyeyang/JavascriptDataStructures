@@ -20,3 +20,19 @@ function countUniqueValues(arr){
     }
     return left + 1; 
 }
+
+
+function countUniqueValues(arr){
+    if(arr.length === 0){
+        return 0; 
+    }
+
+    let left = 0; 
+    for(let i = 1; i < arr.length; i++){
+        if(arr[left] !== arr[i]){
+            left++;
+            arr[left] = arr[i];
+        }
+    }
+    return left + 1; 
+}
