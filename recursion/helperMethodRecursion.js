@@ -38,3 +38,15 @@ function collectOddValuesRecursive(arr){
     newArr = newArr.concat(collectOddValuesRecursive(arr.slice(1)));
     return newArr; 
 }
+function collectOddValuesRecursive(arr){
+    let newArr = [];
+    if(arr.length === 0){
+        return newArr;
+    }
+    if(arr[0] % 2 !== 0){
+        newArr.push(arr[0]);
+    }
+    //.concat merges two or more arrays. 
+    newArr = newArr.concat(collectOddValuesRecursive(arr.slice(1)));
+    return newArr; 
+}
