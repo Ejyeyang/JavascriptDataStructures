@@ -15,3 +15,8 @@ function desc(num1, num2){
     return num2 - num1;
 }
 arr.sort(desc); 
+
+function desc(num1, num2){
+    return num2 - num1;
+}
+arr.sort(desc); 
